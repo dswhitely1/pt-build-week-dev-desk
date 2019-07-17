@@ -1,7 +1,8 @@
 {
-  "name": "devdeskqueue",
+  "name": "DevDesk Queue",
   "version": "1.0.0",
   "description": "This is the backend documentation for Dev Desk Queue Build Week Project",
   "title": "Dev Desk Queue Back End",
-  "url": "https://devdesk-backend.herokuapp.com/"
+  "url": "https://devdesk-backend.herokuapp.com/",
+  "sampleUrl" : "https://devdesk-backend.herokuapp.com/"
 }
