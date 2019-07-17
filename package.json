@@ -1,0 +1,10 @@
+{
+  "name": "devdesk-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Donald Whitely <dswhitely1@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apidoc": "^0.17.7"
+  }
+}
