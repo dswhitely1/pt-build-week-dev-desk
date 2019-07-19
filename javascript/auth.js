@@ -9,6 +9,7 @@
  *
  *  @apiParam {String} username The User's username
  *  @apiParam {String} password The User's password
+ *  @apiParam {String} authType The User's Authtype, can be "Admin", "Helper", or default "User"
  *
  *  @apiSuccess (201) {Object}    message     Success Message
  *  @apiError   RequiredFieldsError     Required Fields are not filled out
@@ -141,7 +142,7 @@
  *
  * @apiParamExample {Object} Request
  * {
- *     authType : 'admin' || "helper" || "user"
+ *     authType : "helper"
  * }
  * @apiSuccessExample {Array} Response
  * {
@@ -285,4 +286,48 @@
  * {
  *     message : "All required fields must be filled to create a ticket"
  * }
+ */
+/**
+ *  @api {put} /api/tickets/:id Update Tickets
+ *  @apiVersion 1.0.0
+ *  @apiName PutTicket
+ *  @apiGroup Tickets
+ *  @apiPermission Admin, Helper, Owner
+ *
+ *  @apiDescription Update a ticket
+ *
+ *  @apiParam {Number}  id  Ticket Id
+ *  @apiSuccess (200) {Object} ticket Will receive the ticket back in response
+ *  @apiError   TicketNotFound  The Ticket was not found
+ *
+ *  @apiSuccessExample {Object} Response
+ * {
+ *     id : 16,
+ *     type : "student-support",
+ *     description : "I have a problem",
+ *     owner : 15,
+ *     assigned : null,
+ *     date: "2019-06-28T119:20:11.244Z",
+ *     title : "Clear and easy to setup",
+ *     tried : "Writing here"
+ * }
+ *
+ *  @apiErrorExample {String} Response
+ *  "Ticket not found"
+ */
+/**
+ * @api {delete} api/tickets/:id    Delete Ticket
+ * @apiVersion 1.0.0
+ * @apiName Delete Ticket
+ * @apiGroup Tickets
+ * @apiPermission none
+ *
+ * @apiDescription Delete a Ticket
+ *
+ * @apiParam    {Number}    id  Ticket Id
+ * @apiSuccess  (204) {Null}      null  No Response Back
+ * @apiError    TicketNotFound  The Ticket was not found
+ *
+ * @apiErrorExample {String}    Response
+ * "Ticket not found"
  */
